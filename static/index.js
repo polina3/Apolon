@@ -1,5 +1,5 @@
 	$(function () {
-  			var date = new Date();
+  			
         var sen=(login,OldPas,NewPas)=>{
            socket.emit('sending', 
               {
@@ -43,6 +43,7 @@
     			main.style.backgroundImage= data.s;
     			f.style.background=data.c;
     			if(!(data.alert===undefined)){
+				var date = new Date();
     				$("#cmd").append( date.getHours()+":"+date.getMinutes()+"&gt; "+data.alert+"</br>");
     			}
           else{
